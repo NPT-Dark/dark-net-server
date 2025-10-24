@@ -15,11 +15,9 @@ import initializeSocketServer from "./sockets/index";
 import { routers } from "./routers/index";
 
 // ⚙️ App Config
+const domainClient = process.env.DOMAIN_CLIENT || "http://localhost:3000";
 const configCors = {
-    origin: [
-        // "http://localhost:3000",
-        "https://6lrzd3l3-3000.asse.devtunnels.ms"
-    ],
+    origin: [domainClient],
     methods: ["GET", "POST", "PUT"],
     credentials: true,
 }
